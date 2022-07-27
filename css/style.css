@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+#body {
+  background-image: url("/img/background.jpg");
+  background-size: 1536px;
+}
+.lista__cuerpo {
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: azure;
+  width: 1200px;
+  height: 600px;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+.lista__card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 5px solid black;
+  padding: 10px;
+}
