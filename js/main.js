@@ -1,36 +1,29 @@
 console.log(document.querySelector("title").innerText);
 
-const listaAlum = document.getElementById("lista").textContent;
-console.log(listaAlum);
+const listaAlum1 = document.querySelectorAll("dl.lista_card > dd");
+const listaAlum2 = document.querySelectorAll("dl.lista__card > dd");
+console.log(listaAlum1, listaAlum2);
 
-const [
-  titulo1,
-  campoPrimN1,
-  primNombre1,
-  campoSegN1,
-  segNombre1,
-  campoPrimA1,
-  primApellido1,
-  campoSegA1,
-  segApellido1,
-  titulo2,
-  campoprimN2,
-  primNombre2,
-  campoSegN2,
-  campoPrimA2,
-  primApellido2,
-  campoSegA2,
-] = listaAlum;
+function nombreCompleto(alumno) {
+  let nombreS = [];
+  for (let i = 0; i < alumno.length; i++) {
+    if (alumno.innerText == []) {
+      console.log("");
+    } else {
+      nombreS = nombreS + alumno[i].innerText + " ";
+    }
+  }
+  return nombreS;
+}
+
+let alumno1 = nombreCompleto(listaAlum1);
+let alumno2 = nombreCompleto(listaAlum2);
+// console.log(alumno1, alumno2);
 
 console.log(
-  listaAlum[0] +
-    '1: "' +
-    primNombre1 +
-    " " +
-    segNombre1 +
-    " " +
-    primApellido1 +
-    " " +
-    segApellido1 +
-    '"'
+  '----- \nIntegrante 1: "' +
+    alumno1 +
+    '"\nIntegrante 2: "' +
+    alumno2 +
+    '"\n-----'
 );
